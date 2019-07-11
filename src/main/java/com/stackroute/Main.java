@@ -21,27 +21,18 @@ public class Main {
 public static void main(String[]args) {
     //using ApplicationContext
     ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-    Actor actor = context.getBean("actor", Actor.class);
-    actor.display();
     Moive movie = context.getBean("movie", Moive.class);
     movie.moiveDisplay();
-    //using Beanfactory
-    System.out.println("================================================");
-    System.out.println("using BeanFactor");
-    XmlBeanFactory xmlBeanFactory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
-    Actor actor1 = context.getBean("actor", Actor.class);
-    actor1.display();
     Moive movie1 = context.getBean("movie", Moive.class);
     movie1.moiveDisplay();
-    System.out.println("================================================");
-    //using BeanDefinitionRegistry
-    System.out.println("using beanDefinitionReader");
-    DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
-    BeanDefinitionRegistry register = new GenericApplicationContext(factory);
-    BeanDefinitionReader reader = new XmlBeanDefinitionReader(register);
-    reader.loadBeanDefinitions("beans.xml");
-    Moive picture1 = factory.getBean("movie", Moive.class);
-    picture1.moiveDisplay();
+    System.out.println(movie==movie1);
+    System.out.println("===============");
+    Moive movie2 = context.getBean("movie2", Moive.class);
+    movie2.moiveDisplay();
+    Moive movie3= context.getBean("movie4", Moive.class);
+    movie3.moiveDisplay();
+
+
 
 
 }

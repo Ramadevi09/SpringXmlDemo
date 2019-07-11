@@ -3,8 +3,14 @@ package com.stackroute.domain;
 public class Moive {
     //actor class instantiation
     private Actor actor;
+   public Moive(){
+    }
 
     public Moive(Actor actor) {
+        this.actor = actor;
+    }
+
+    public void setActor(Actor actor) {
         this.actor = actor;
     }
 

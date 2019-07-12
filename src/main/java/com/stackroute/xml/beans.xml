@@ -10,7 +10,9 @@
         <constructor-arg index="2" type="int" name="age" value="26"></constructor-arg>
     </bean>
     <bean id="movie" class="com.stackroute.domain.Moive" autowire="byName"></bean>-->
+    <bean id="beanlifecycle" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
     <bean id="lifecycleDemo" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy" ></bean>
+
 
 
 </beans>

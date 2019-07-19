@@ -28,20 +28,21 @@ public void moiveDisplay(){
     actor.display();
 }
 
-
+//overriding method for ApplicationContext
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 this.applicationContext=applicationContext;
         System.out.println("implemented applicationContext interface in movie");
+        //displaying actor details 
         Moive moive=applicationContext.getBean("movie",Moive.class);
         moive.moiveDisplay();
     }
-
+//retriving beanName
     @Override
     public void setBeanName(String s) {
         System.out.println("bean name is :"+ s);
     }
-
+//retriving beanfactory
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println("bean factory is :"+beanFactory);

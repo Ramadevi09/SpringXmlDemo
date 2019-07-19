@@ -19,7 +19,7 @@ import org.springframework.core.io.FileSystemResource;
 
 public class Main {
 public static void main(String[]args) {
-    //using ApplicationContext
+    //displaying actor details for using ApplicationContext
     ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
     Moive movie = context.getBean("movie", Moive.class);
     movie.moiveDisplay();

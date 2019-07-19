@@ -28,7 +28,7 @@ public void moiveDisplay(){
     actor.display();
 }
 
-
+//setApplicationContext
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 this.applicationContext=applicationContext;
@@ -36,12 +36,12 @@ this.applicationContext=applicationContext;
         Moive moive=applicationContext.getBean("movie",Moive.class);
         moive.moiveDisplay();
     }
-
+//retriving beanname
     @Override
     public void setBeanName(String s) {
         System.out.println("bean name is :"+ s);
     }
-
+//retriving beanfactory
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println("bean factory is :"+beanFactory);

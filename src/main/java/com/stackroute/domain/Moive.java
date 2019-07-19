@@ -36,12 +36,12 @@ this.applicationContext=applicationContext;
         Moive moive=applicationContext.getBean("movie",Moive.class);
         moive.moiveDisplay();
     }
-
+//override method for setBeanName
     @Override
     public void setBeanName(String s) {
         System.out.println("bean name is :"+ s);
     }
-
+//override method for setBeanfactory
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println("bean factory is :"+beanFactory);

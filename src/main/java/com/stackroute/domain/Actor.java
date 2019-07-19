@@ -7,7 +7,7 @@ public class Actor {
     private int age;
 
 
-
+//Actor Constructor
     public Actor(String name, String gender, int age) {
         this.name = name;
         this.gender = gender;

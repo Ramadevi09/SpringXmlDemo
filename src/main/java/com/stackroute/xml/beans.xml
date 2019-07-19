@@ -3,17 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-<!--property based injection-->
+<!--property based injection for Actor-->
     <bean id="actor" class="com.stackroute.domain.Actor">
         <constructor-arg  index="0" type="java.lang.String" name="name" value="raja"></constructor-arg>
         <constructor-arg index="1" type="java.lang.String" name="gender" value="male"></constructor-arg>
         <constructor-arg index="2" type="int" name="age" value="26"></constructor-arg>
     </bean>
-    <!--autowire byName-->
+    <!--property based injection for movie autowire byName-->
     <bean id="movie" class="com.stackroute.domain.Moive" autowire="byName"></bean>
-    <!--autowire bytype-->
+    <!--property based injection for movie autowire bytype-->
     <bean id="movie1" class="com.stackroute.domain.Moive" autowire="byType"></bean>
-    <!--autowire by constructor-->
+    <!--property based injection for movie autowire by constructor-->
     <bean id="movie2" class="com.stackroute.domain.Moive" autowire="constructor"></bean>
 
 </beans>
